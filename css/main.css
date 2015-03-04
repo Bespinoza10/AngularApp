@@ -5,12 +5,14 @@
 	margin-bottom: 50px;
 }
 
+/*
 .container
 {
 	border: solid #3b7fa9;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 	margin: 50px;
 }
+*/
 
 h1 {
 	color: #3b7fa9;
@@ -20,12 +22,28 @@ h2 {
 	color: #ef9250;
 }
 
+.box:active
+{
+	background: blue;
+}
 
+.elbotton
+{
+	border-bottom: #27b12a;
+	border-left: #27b12a;
+	border-right:#27b12a;
+	border-top: #27b12a;
+  border-color: #27b12a;
+}
 .elbotton:hover
 {
 	background: #27b12a;	
 }
 
+.botton
+{
+	background: rgba(216, 70, 70, 0.85);
+}
 .botton:hover
 {
 	background: red;
@@ -33,9 +51,10 @@ h2 {
 
 .sortar
 {
-	margin-left: 15px;
-	margin-top: 10px;
+	border: solid #49a3db;
 	margin-bottom: 20px;
+	background: #49a3db;
+	border-radius: 5px;
 }
 
 /* Table components */
