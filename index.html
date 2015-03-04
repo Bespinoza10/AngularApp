@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Title</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
     <!--[if lt IE 9]>
@@ -13,25 +15,97 @@
     <![endif]-->
 
     <div class="container" ng-controller="TasController as tas">
-      <h1>My TAddress Book</h1>
-      New TA:
-      <input ng-model="tas.newName">
-      <button ng-click="tas.addTA()">Save</button>
-      <br>
-      Search: <input ng-model="friendFilterQuery">
-      <br>
-      Sort:
-      <button ng-click="friendReverse=!friendReverse">Change Sort</button>
-      <br>
-      <div class="hellofriends" ng-repeat="person in tas.data
-         | filter:friendFilterQuery
-         | orderBy:'name':friendReverse">
-        <h1 style="display: inline">Hello {{person.name | uppercase}}</h1>
-        <button ng-click="tas.removeTA(person)">X</button>
-      </div>
+	  <div class="body2">
+	      <h1>My TAddress Book</h1>
+<!--
+		  <form ng-submit="tas.addTA()">
+	        <label>First:<label>
+	        <input ng-model="tas.newFirstName">
+	        <label>Last:<label>
+	        <input ng-model="tas.newLastName">
+	        <label>NickName:<label>
+	        <input ng-model="tas.newNickName">
+	        <input class= "button-success"type="submit" value="Save">
+	      </form>
+-->
+	     <div class="large-6 columns">
+		     <h1 class="titulo">New TA:</h1>
+	      <form ng-submit="tas.addTA()">
+		  <div class="row">
+		    <div class="large-6 columns">
+		      <div class="row collapse">
+		        <div class="small-10 columns">
+			       <label>First:</label>
+		          <input ng-model="tas.newTA.firstName" required type="text" placeholder="First Name">
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="large-6 columns">
+		      <div class="row collapse">
+		        <div class="small-10 columns">
+			      <label>Last:</label>
+		          <input ng-model="tas.newTA.lastName" required type="text" placeholder="Last Name">
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="large-6 columns">
+		      <div class="row collapse">
+		        <div class="small-10 columns">
+				<button class="button" ng-click="tas.addTA()">Save</button>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		</form>
+	     </div>
+<!--
+	      <input class="Nombre" ng-model="tas.newName">
+	      <button class="guardar button" ng-click="tas.addTA()">Save</button>
+	      <br>
+	      Search: <input class="buscar" ng-model="friendFilterQuery">
+	      
+-->
+		<br>
+	      Sort:
+	      <button class="sortar button" ng-click="friendReverse=!friendReverse">Change Sort</button>
+	      <br>
+	      	<div class="small-6 large-12">
+		      <table>
+		        <thead>
+		          <tr>
+		            <th class="rowNames">Name</th>
+		            <th class="rowNames">Nick Name</th>
+		            <th class="rowNames">First Name</th>
+		            <th class="rowNames">Last Name</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr class="hellofriends" ng-repeat="person in tas.data
+		            | filter:friendFilterQuery
+		            | orderBy:['current','-nickName']:friendReverse">
+		            <td>{{person.name}}</td>
+		            <td>{{person.nickName | uppercase}}</td>
+		            <td>{{person.firstName}}</td>
+		            <td>{{person.lastName}}</td>
+		            <td>
+		              <button ng-click="tas.removeTA(person)">X</button>
+		            </td>
+		          </tr>
+		        </tbody>
+		      </table>
+	      	</div>
+	    </div>
     </div>
-
-    <script src="bower_components/angular/angular.min.js"></script>
+	<script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+	<script src="bower_components/angular/angular.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

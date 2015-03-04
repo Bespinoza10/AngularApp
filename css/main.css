@@ -1,11 +1,61 @@
+.body2
+{
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.container
+{
+	border: solid #3b7fa9;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	margin: 20px;
+}
+
 h1 {
-	color: cadetblue;
+	color: #3b7fa9;
 }
 
 h2 {
-	color: saddlebrown;
+	color: #ef9250;
 }
 
-.container {
-	margin: 10%;
+.guardar
+{
+	margin-left: 30px;
 }
+
+/*
+.Nombre
+{
+	margin-left: 20px;
+}
+
+.buscar
+{
+	margin-top: 10px;
+	margin-left: 32px;
+}
+*/
+.sortar
+{
+	margin-left: 15px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+/* Table components */
+
+.rowNames
+{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.titulo
+{
+	font-size: 25px;
+	
+}
+
+
