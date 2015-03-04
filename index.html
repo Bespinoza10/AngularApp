@@ -14,7 +14,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <div class="container" ng-controller="TasController as tas">
+    <div class="large-10" ng-controller="TasController as tas">
 	  <div class="body2">
 	      <h1>My TAddress Book</h1>
 <!--
@@ -30,7 +30,7 @@
 -->
 	     <div class="large-6 columns">
 		     <h1 class="titulo">New TA:</h1>
-	      <form ng-submit="tas.addTA()">
+	      <form name="tas.newTA" ng-submit="tas.addTA()">
 		  <div class="row">
 		    <div class="large-6 columns">
 		      <div class="row collapse">
@@ -55,25 +55,18 @@
 		    <div class="large-6 columns">
 		      <div class="row collapse">
 		        <div class="small-10 columns">
-				<button class="button" ng-click="tas.addTA()">Save</button>
+				<button class="button elbotton" ng-click="tas.addTA()">Save</button>
 		      	</div>
 		      </div>
 		    </div>
 		  </div>
 		</form>
 	     </div>
-<!--
-	      <input class="Nombre" ng-model="tas.newName">
-	      <button class="guardar button" ng-click="tas.addTA()">Save</button>
-	      <br>
-	      Search: <input class="buscar" ng-model="friendFilterQuery">
-	      
--->
-		<br>
+		 <br>
 	      Sort:
 	      <button class="sortar button" ng-click="friendReverse=!friendReverse">Change Sort</button>
 	      <br>
-	      	<div class="small-6 large-12">
+	      	<div class="large-12 medium-8">
 		      <table>
 		        <thead>
 		          <tr>
@@ -92,7 +85,7 @@
 		            <td>{{person.firstName}}</td>
 		            <td>{{person.lastName}}</td>
 		            <td>
-		              <button ng-click="tas.removeTA(person)">X</button>
+		              <button class="botton" ng-click="tas.removeTA(person)">X</button>
 		            </td>
 		          </tr>
 		        </tbody>

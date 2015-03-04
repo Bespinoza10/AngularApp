@@ -9,7 +9,7 @@
 {
 	border: solid #3b7fa9;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	margin: 20px;
+	margin: 50px;
 }
 
 h1 {
@@ -20,23 +20,17 @@ h2 {
 	color: #ef9250;
 }
 
-.guardar
+
+.elbotton:hover
 {
-	margin-left: 30px;
+	background: #27b12a;	
 }
 
-/*
-.Nombre
+.botton:hover
 {
-	margin-left: 20px;
+	background: red;
 }
 
-.buscar
-{
-	margin-top: 10px;
-	margin-left: 32px;
-}
-*/
 .sortar
 {
 	margin-left: 15px;
